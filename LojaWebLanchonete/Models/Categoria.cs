@@ -1,13 +1,15 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Threading.Tasks;
+﻿using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations;
 
 namespace LojaWebLanchonete.Models
 {
     public class Categoria
     {
         public int CategoriaId { get; set; }
-        public stryProperty { get; set; }
+        [StringLength(100)]
+        public string CategoriaNome { get; set; }
+        [StringLength(200)]
+        public string Descricao { get; set; }
+        public List<Lanche> Lanches { get; set; }
     }
 }
